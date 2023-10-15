@@ -1,5 +1,10 @@
 # Εισαγωγή στo Angular Framework
 
+## 5. Component Output
+
+- Χρήση του decorator @Output() σε χαρακτηριστικό της κλάσης για τη δημιουργία custom event στο component. Συνδυάζεται με το interface EventEmitter<T> όπου Τ ο τύπος των δεδομένων που μεταδίδει το custom event.
+- To custom event συνήθως προκύπτει από ένα standard event στο template του component (πχ click πάνω σε ένα κουμπί).
+
 ## 5. Event Binding (tempate -> controller)
 
 - Click handlers
