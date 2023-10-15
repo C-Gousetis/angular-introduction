@@ -1,25 +1,5 @@
 # Εισαγωγή στo Angular Framework
 
-## 1. Δημιουργία νέου component
-
-```
-ng generate component person --dry-run
-```
-
-Μας δείχνει τι ακριβώς θα παραχθεί χωρίς όμως να δημιουργεί πραγματικά τα αρχεία
-
-```
-CREATE src/app/person/person.component.css (0 bytes)
-CREATE src/app/person/person.component.html (21 bytes)
-CREATE src/app/person/person.component.spec.ts (554 bytes)
-CREATE src/app/person/person.component.ts (297 bytes)
-
-NOTE: The "--dry-run" option means no changes were made.
-```
-
-- Μεταφορά του χαρακτηριστικού `person` από την κλάση `AppComponent` στην κλάση `PersonComponent`.
-- Διαπίστωση πως το css χρειάζεται επίσης να μεταφερθεί στο `person.component.css`.
-
 ## 0. Απλή δέσμευση χαρακτηριστικού
 
 
