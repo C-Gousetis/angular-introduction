@@ -1,5 +1,11 @@
 # Εισαγωγή στo Angular Framework
 
+## 5. Event Binding (tempate -> controller)
+
+- Click handlers
+- Input handlers
+- Two way Binding
+
 ## 4. *ngFor Directive 
 
 - 

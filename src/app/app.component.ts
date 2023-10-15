@@ -4,11 +4,12 @@ import { Person } from './interfaces/person';
 
 import { PersonComponent } from './person/person.component';
 import { PersonAltComponent } from './person-alt/person-alt.component';
+import { EventBingComponent } from './event-bing/event-bing.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, PersonComponent, PersonAltComponent],
+  imports: [CommonModule, PersonComponent, PersonAltComponent, EventBingComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

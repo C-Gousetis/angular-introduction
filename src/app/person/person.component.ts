@@ -15,7 +15,7 @@ export class PersonComponent {
   // @Input() person: Person | undefined
 
   @Input() person: Person = {
-    givenName: "The person's firsname",
+    givenName: "The person's firstname",
     surname : "The person's lastname",
     age : 0,
     email : "The person's email",
