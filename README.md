@@ -1,5 +1,11 @@
 # Εισαγωγή στo Angular Framework
 
+## 3. Alternate Component input
+
+- Input | undefined
+- *ngIf για εμφάνιση υπό συνθήκη στο template
+- ng-container & ng-template
+
 ## 2. Component input
 
 Δημιουργία interface για τα δεδομένα **τύπου Person**:
