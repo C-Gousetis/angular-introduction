@@ -1,9 +1,13 @@
-Εισαγωγή στo Angular Framework
--1. Εγκατάσταση του Angular Command Line:
-npm install -g @angular/cli@latest
+#Εισαγωγή στo Angular Framework
+
+##-1. Εγκατάσταση του Angular Command Line:
+
+`npm install -g @angular/cli@latest`
+
 Έλεγχος εγκατάστασης:
 
-ng version
+`ng version`
+
 Ενδεικτικό output:
 
      _                      _                 ____ _     ___
