@@ -1,12 +1,12 @@
 <table class="table">
     <thead class="table-info">
         <tr>
-            <td>#</td>
-            <td>Firstname</td>
-            <td>Lastname</td>
-            <td>Age</td>
-            <td></td>
-            <td></td>
+            <th>#</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+            <th colspan="2" class="text-center">Actions</th>
+            
         </tr>
     </thead>
     <tbody>
@@ -15,12 +15,12 @@
             <td>{{ user.givenName }}</td>
             <td>{{ user.surname }}</td>
             <td>{{ user.age }}</td>
-            <td>
-                <button (click)="onDeleteUser(i)" class="btn btn-danger btn-sm">
+            <td class="text-center">
+                <button (click)="onDeleteUser(i)" class="btn btn-danger btn-sm text">
                     Delete
                 </button>
             </td>
-            <td>
+            <td class="text-center">
                 <button (click)="onSendUser(user)" class="btn btn-success btn-sm">
                     Send User
                 </button>

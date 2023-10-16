@@ -13,8 +13,14 @@
 
 <app-person-alt *ngFor="let user of users" [person]="user"></app-person-alt> -->
 
-<app-event-bing></app-event-bing>
+<!-- <app-event-bing></app-event-bing>
  
-<br>
+<br> -->
 
-<app-output-demo></app-output-demo>
+<app-output-demo
+    [userData]="users" 
+    (deleteUser)="onDeleteUser($event)" 
+    (sendUser)="onSendUser($event)"
+></app-output-demo>
+
+<app-person-card [person]="sentUser"></app-person-card>
