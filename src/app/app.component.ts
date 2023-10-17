@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Person } from './interfaces/person';
 
@@ -9,6 +9,7 @@ import { OutputDemoComponent } from './output-demo/output-demo.component';
 import { PersonCardComponent } from './person-card/person-card.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   name: string = "Catherine";
   lastname: string = "Gousetis";
 
@@ -39,7 +40,7 @@ export class AppComponent {
     address: "Athens, Greece"
   };
 
-  users: Person[] = [
+  users1: Person[] = [
     {
       givenName: 'John',
       surname: 'Doe',
@@ -122,10 +123,21 @@ export class AppComponent {
     },
   ];
 
+  users: Person[] = []; 
+
+  constructor(private appService: AppService = Inject(AppService)) {}
+
+  ngOnInit(): void {
+    this.appService.getAllUsers().subscribe((users) => {
+      this.users = users;
+      console.log(this.users)
+    })
+  }
+
   sentUser: Person | undefined;
 
   onDeleteUser(i: number) {
-    this.users.splice(i,1);
+    this.users1.splice(i,1);
   }
 
   onSendUser(user: Person) {
@@ -134,7 +146,7 @@ export class AppComponent {
   }
 
   onNewPerson(person: Person) {
-    this.users.push(person);
+    this.users1.push(person);
   }
 
 }
