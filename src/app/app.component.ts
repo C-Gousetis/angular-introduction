@@ -8,13 +8,14 @@ import { EventBingComponent } from './event-bing/event-bing.component';
 import { OutputDemoComponent } from './output-demo/output-demo.component';
 import { PersonCardComponent } from './person-card/person-card.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, PersonComponent, PersonAltComponent,
             EventBingComponent, OutputDemoComponent, PersonCardComponent,
-          TemplateDrivenFormComponent],
+          TemplateDrivenFormComponent, ReactiveFormComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
