@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AppService } from 'src/app/app.service';
+import { Person } from 'src/app/interfaces/person';
 
 @Component({
   selector: 'app-list-user',
@@ -8,6 +10,12 @@ import { CommonModule } from '@angular/common';
   templateUrl: './list-user.component.html',
   styleUrls: ['./list-user.component.css']
 })
-export class ListUserComponent {
+export class ListUserComponent implements OnInit {
 
+  users: Person[] = []
+  constructor(private service: AppService = Inject(AppService)) {}
+
+  ngOnInit(): void {
+    this.service.getAllUsers().subscribe((users) => {this.users = users;});
+  }
 }
